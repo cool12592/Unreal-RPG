@@ -185,6 +185,7 @@ void ABasicEnemy::MyTakeDamage(AActor* attacker, float damage, EnemyHitedState h
 		return;
 
 	AttackCoolTime = 1.5;
+	ConfusedTime = 1.5;
 	isRunHitedTime = false; //pause에서부터 돌아감
 	isHited = true;
 	HitedTime = hitedTime_; //TICK에서 작동
@@ -325,6 +326,8 @@ void ABasicEnemy::TickAttackCoolTime(float delta)
 {
 	if (0 < AttackCoolTime)
 		AttackCoolTime -= delta;
+	if (0 < ConfusedTime)
+		ConfusedTime -= DeltaTime;
 }
 
 void ABasicEnemy::StartHolding(float delay)

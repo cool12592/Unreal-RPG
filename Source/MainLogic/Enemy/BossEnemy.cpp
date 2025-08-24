@@ -43,12 +43,16 @@ void ABossEnemy::Tick(float DeltaTime)
 	TickParabola(DeltaTime);
 	RotationArroundToPlayer();
 
-	if (isAttacking) 
-		return;
-
+	if (isAttacking) return;
 	CalculateDistFromPlayer();
+
+	if (isAttacking) return;
 	CheckBackAttack();
+
+	if (isAttacking) return;
 	CheckSuddenAttack();
+
+	if (isAttacking) return;
 	Turn();
 
 }

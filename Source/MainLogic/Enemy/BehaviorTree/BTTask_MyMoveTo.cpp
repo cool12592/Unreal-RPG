@@ -69,7 +69,7 @@ void UBTTask_MyMoveTo::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMe
 
 bool UBTTask_MyMoveTo::CheckMovableCondition()
 {
-    if (OwnerEnemy->isAttacking || OwnerEnemy->isHited)
+    if (OwnerEnemy->isAttacking || OwnerEnemy->isHited || 0 < OwnerEnemy->ConfusedTime)
     {
         return false;
     }

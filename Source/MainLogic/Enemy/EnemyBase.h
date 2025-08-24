@@ -46,6 +46,7 @@ public:
 	bool isTurnDuringAttacking = false; //공격중에도 회전하냐
 
 	float AttackCoolTime = 0.0f;
+	float ConfusedTime = 0.0f;
 	bool isAttacking = false;
 	bool isHited = false;
 	bool isBoss = false;
