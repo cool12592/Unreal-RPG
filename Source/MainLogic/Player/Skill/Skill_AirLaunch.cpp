@@ -60,10 +60,10 @@ void USkill_AirLaunch::ApplyAirLaunchDamage()
 				if (AirLaunchCount == 0)
 				{
 					enemyActor->GetCharacterMovement()->StopMovementImmediately();
-					enemyActor->MyTakeDamage(OwnerPlayer, SkillData->Damage, EnemyHitedState::RightLeft, 3.f, FVector(0.f, 0.f, 1420.f));
+					enemyActor->MyTakeDamage(OwnerPlayer, SkillData->Damage, EnemyHitedState::RightLeft, SkillData->StunTime, FVector(0.f, 0.f, 1420.f));
 				}
 				else
-					enemyActor->MyTakeDamage(OwnerPlayer, SkillData->Damage, EnemyHitedState::RightLeft, 3.f);
+					enemyActor->MyTakeDamage(OwnerPlayer, SkillData->Damage, EnemyHitedState::RightLeft, SkillData->StunTime);
 			}
 		}
 	}
